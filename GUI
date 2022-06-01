@@ -45,15 +45,15 @@ Section:NewToggle("Tween TP to Boxes (WIP)", "Tween teleports you to boxes autom
 end)
 
 Section2:NewButton("Arcade TP", "TPs you to Arcade NPC", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-193.663483, -32.0086899, 1457.64453)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-193.662201, -32.0086899, 1457.67493, -0.99998641, -2.32533326e-09, -0.00520772999, -1.85743965e-09, 1, -8.9850829e-08, 0.00520772999, -8.98399364e-08, -0.99998641)
 end)
 
 Section2:NewButton("Shop TP", "TPs you to Shop", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-377.407959, -31.7041759, 1819.72839)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-377.407959, -31.7041759, 1819.72839, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 end)
 
 Section2:NewButton("Battle Field TP", "TPs you to Battle Field", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-522.604004, -31.1859627, 1655.12964)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-522.901184, -31.1859684, 1661.70325, -0.999686897, 4.92673813e-08, -0.0250231288, 4.99992865e-08, 1, -2.86235693e-08, 0.0250231288, -2.98657454e-08, -0.999686897)
 end)
 
 Section3:NewSlider("Walkspeed", "Sets your Walkspeed", 26, 0, function(s)
