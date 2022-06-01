@@ -80,6 +80,7 @@ function doSell()
             game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Stone Mask");
             game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Mysterious Camera");
             game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Spin Manual");
+            game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Haunted Sword");            
                 end
             end
         end)
