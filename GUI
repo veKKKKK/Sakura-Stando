@@ -57,7 +57,7 @@ Section2:NewButton("Battle Field TP", "TPs you to Battle Field", function()
 end)
 
 Section2:NewButton("Sell TP", "TPs you to Sell NPC", function()
-    game.Players.LocalPlayer.Charcater.HumanoidRootPart.CFrame = CFrame.new(-619.61853, -32.6608734, 1916.25134)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-619.61853, -32.6608734, 1916.25134)
 
 Section3:NewSlider("Walkspeed", "Sets your Walkspeed", 26, 0, function(s)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
