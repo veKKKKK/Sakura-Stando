@@ -53,7 +53,7 @@ Section2:NewButton("Shop TP", "TPs you to Shop", function()
 end)
 
 Section2:NewButton("Battle Field TP", "TPs you to Battle Field", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-430.551331, -31.1859684, 1700.95398)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-522.342346, -29.693716, 1643.95459)
 end)
 
 Section3:NewSlider("Walkspeed", "Sets your Walkspeed", 26, 0, function(s)
