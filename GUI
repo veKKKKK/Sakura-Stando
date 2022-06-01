@@ -48,13 +48,16 @@ Section2:NewButton("Arcade TP", "TPs you to Arcade NPC", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-193.662201, -32.0086899, 1457.67493)
 end)
 
-Section2:NewButton("Shop TP", "TPs you to Shop", function()
+Section2:NewButton("Shop TP", "TPs you to Shop NPC", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-377.407959, -31.7041759, 1819.72839)
 end)
 
 Section2:NewButton("Battle Field TP", "TPs you to Battle Field", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-522.342346, -29.693716, 1643.95459)
 end)
+
+Section2:NewButton("Sell TP", "TPs you to Sell NPC", function()
+    game.Players.LocalPlayer.Charcater.HumanoidRootPart.CFrame = CFrame.new(-619.61853, -32.6608734, 1916.25134)
 
 Section3:NewSlider("Walkspeed", "Sets your Walkspeed", 26, 0, function(s)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
