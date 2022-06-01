@@ -73,6 +73,7 @@ function doOpen()
     spawn(function()
     while wait() do
         if getgenv().Opener == true then
+	      wait(0.5)
               for i,v in pairs(game:GetService("Workspace").Item:GetDescendants()) do
               if v:IsA("ClickDetector") then
               fireclickdetector(v)
