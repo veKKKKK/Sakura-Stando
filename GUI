@@ -103,6 +103,7 @@ function doSell()
     spawn(function()
     while wait() do
         if getgenv().Seller == true then
+	    wait(0.6)
             game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Arrow");
             game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Rokakaka");
             game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Hamon Manual");
