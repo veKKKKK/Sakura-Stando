@@ -20,7 +20,6 @@ local Section4 = Tab:NewSection("Misc")
 Section:NewToggle("Auto Open Box", "Opens boxes automatically if they are in range.", function(state)
     if state then
         getgenv().Opener = true;
-        doOpen()
     else
         getgenv().Opener = false;
     end
@@ -29,7 +28,6 @@ end)
 Section:NewToggle("Auto Sell Items", "Sells every item in your inventory.", function(state)
     if state then
         getgenv().Seller = true;
-        doSell()
     else
         getgenv().Seller = false;
     end
@@ -38,7 +36,6 @@ end)
 Section:NewToggle("Tween TP to Boxes (WIP)", "Tween teleports you to boxes automatically", function(state)
     if state then
         getgenv().Twener = true;
-        doTween()
     else
         getgenv().Tweener = false;
     end
@@ -60,6 +57,7 @@ Section2:NewButton("Sell TP", "TPs you to Sell NPC", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-619.496765, -32.492836, 1916.0824)
 end)
 
+
 Section3:NewSlider("Walkspeed", "Sets your Walkspeed", 26, 0, function(s)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
@@ -69,11 +67,9 @@ Section4:NewKeybind("Toggle GUI", "Toggles Gui", Enum.KeyCode.RightControl, func
 end)
 
 
-function doOpen()
-    spawn(function()
+
     while wait() do
         if getgenv().Opener == true then
-	      wait(0.5)
               for i,v in pairs(game:GetService("Workspace").Item:GetDescendants()) do
               if v:IsA("ClickDetector") then
               fireclickdetector(v)
@@ -81,13 +77,12 @@ function doOpen()
                 end
             end
         end
-    end)
-end
 
 
 
-function doTween()
-    spawn(function()
+
+
+
     while wait() do
         if getgenv().Tweener == true then
                 tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
@@ -96,22 +91,16 @@ function doTween()
                 tween:Play()
             end
         end
-    end)
-end
 
-function doSell()
-    spawn(function()
-    while wait() do
-        if getgenv().Seller == true then
-	    wait(0.6)
-            game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Arrow");
-            game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Rokakaka");
-            game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Hamon Manual");
-            game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Stop Sign");
-            game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Stone Mask");
-            game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Mysterious Camera");
-            game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Spin Manual");
+
+while wait() do
+    if getgenv().Seller == true then
+        game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Arrow");
+        game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Rokakaka");
+        game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Hamon Manual");
+        game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Stop Sign");
+        game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Stone Mask");
+        game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Mysterious Camera");
+        game:service'ReplicatedStorage'.GlobalUsedRemotes.SellItem:FireServer("Spin Manual");
                 end
             end
-        end)
-    end
